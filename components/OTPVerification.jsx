@@ -1,0 +1,57 @@
+'use client'
+
+import React, { useState } from 'react'
+
+export default function OTPVerification({ onSuccess }) {
+  const [otp, setOtp] = useState('')
+  const [error, setError] = useState('')
+  const [isVerified, setIsVerified] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (otp === '123456') {
+      setIsVerified(true)
+      setError('')
+    } else {
+      setError('Invalid OTP. Try 123456 for demo.')
+    }
+  }
+
+  return (
+    <>
+      <div className='space-y-4'>
+        <h2 className='text-xl font-bold'>OTP Verification</h2>
+        {!isVerified ? (
+          <form onSubmit={handleSubmit} className='space-y-2'>
+            <input
+              type='text'
+              value={otp}
+              onChange={(e) => setOtp(e.target.value)}
+              placeholder='Enter OTP'
+              className='border px-3 py-2 rounded w-full'
+            />
+            {error && <p className='text-red-500 text-sm'>{error}</p>}
+            <button
+              type='submit'
+              className='bg-blue-600 text-white px-4 py-2 rounded'
+            >
+              Verify OTP
+            </button>
+          </form>
+        ) : (
+          <div className='space-y-2'>
+            <p className='text-green-600 font-medium'>
+              OTP verified successfully ✅
+            </p>
+            <button
+              onClick={onSuccess}
+              className='bg-green-600 text-white px-4 py-2 rounded'
+            >
+              Next
+            </button>
+          </div>
+        )}
+      </div>
+    </>
+  )
+}
