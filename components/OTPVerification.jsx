@@ -19,7 +19,7 @@ export default function OTPVerification({ onSuccess }) {
 
   return (
     <>
-      <div className='space-y-4'>
+      <div className='space-y-4 mt-8'>
         <h2 className='text-xl font-bold'>OTP Verification</h2>
         {!isVerified ? (
           <form onSubmit={handleSubmit} className='space-y-2'>
@@ -33,7 +33,7 @@ export default function OTPVerification({ onSuccess }) {
             {error && <p className='text-red-500 text-sm'>{error}</p>}
             <button
               type='submit'
-              className='bg-blue-600 text-white px-4 py-2 rounded'
+              className='bg-blue-600 text-white font-bold px-8 py-2 rounded'
             >
               Verify OTP
             </button>
@@ -45,7 +45,7 @@ export default function OTPVerification({ onSuccess }) {
             </p>
             <button
               onClick={onSuccess}
-              className='bg-green-600 text-white px-4 py-2 rounded'
+              className='bg-green-600 text-white font-bold px-8 py-1 rounded'
             >
               Next
             </button>

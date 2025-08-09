@@ -47,9 +47,9 @@ export default function Home() {
   const getGreeting = () => {
     if (!currentTime) return ''
     const hour = currentTime.getHours()
-    if (hour >= 5 && hour < 12) return t('Good Morning')
-    if (hour >= 12 && hour < 17) return t('Good Afternoon')
-    return t('Good Evening')
+    if (hour >= 5 && hour < 12) return t('Good Morning Traveler')
+    if (hour >= 12 && hour < 17) return t('Good Afternoon Traveler')
+    return t('Good Evening Traveler')
   }
 
   const getTimeOfDay = () => {
@@ -64,10 +64,10 @@ export default function Home() {
       <div className='text-center mb-4 '>
         {hasMounted && (
           <>
-            <p className='text-5xl font-extrabold text-gray-600 dark:text-gray-400 mb-4'>
+            <p className='text-7xl font-extrabold text-sky-50 dark:text-sky-50 mb-4'>
               {getTimeOfDay()}
             </p>
-            <h2 className='text-sm font-semibold text-gray-800 dark:text-gray-100'>
+            <h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100'>
               {getGreeting()}
             </h2>
           </>

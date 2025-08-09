@@ -135,7 +135,7 @@ export default function PhoneInput({ onSuccess }) {
         <button
           type='button'
           onClick={() => setDropdownOpen((prev) => !prev)}
-          className='flex items-center space-x-1 focus:outline-none w-[15%] justify-between'
+          className='flex items-center space-x-1 focus:outline-none w-[20%] justify-between'
         >
           <ReactCountryFlag
             svg
