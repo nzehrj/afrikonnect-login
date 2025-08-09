@@ -121,10 +121,10 @@ export default function PhoneInput({ onSuccess }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='space-y-2 w-[250px] mx-auto relative'
+      className='space-y-4 w-[280px] md:w-[250px] mx-auto relative'
       ref={containerRef}
     >
-      <label className='block text-sm font-medium text-amber-100'>
+      <label className='block text-sm font-medium text-amber-100 mb-2'>
         Enter Phone Number
       </label>
 
@@ -135,7 +135,7 @@ export default function PhoneInput({ onSuccess }) {
         <button
           type='button'
           onClick={() => setDropdownOpen((prev) => !prev)}
-          className='flex items-center space-x-1 focus:outline-none w-[30%] justify-between'
+          className='flex items-center space-x-1 focus:outline-none w-[15%] justify-between'
         >
           <ReactCountryFlag
             svg
@@ -156,7 +156,7 @@ export default function PhoneInput({ onSuccess }) {
             setPhoneValue(e.target.value)
             setValue('phone', e.target.value)
           }}
-          className='flex-1 outline-none bg-transparent text-black text-sm pl-2'
+          className='flex-1 outline-none bg-transparent text-black text-xs pl-2'
         />
       </div>
 

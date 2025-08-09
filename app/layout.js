@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           backgroundRepeat: 'repeat',
         }}
       >
-        <main className='flex items-end justify-end min-h-screen'>
+        <main className='flex item-center md:justify-end min-h-screen'>
           {children}
         </main>
       </body>
