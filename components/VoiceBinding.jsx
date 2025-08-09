@@ -86,7 +86,7 @@ export default function VoiceBinding({ onSuccess }) {
   }
 
   return (
-    <div className='flex items-center justify-center min-h-screen px-4'>
+    <div className='flex items-center justify-center min-h-screen my-[-40px] px-4'>
       {' '}
       {/* ✅ Center on small screens */}
       <motion.div
@@ -96,10 +96,10 @@ export default function VoiceBinding({ onSuccess }) {
       >
         <h2 className='text-xl font-bold mb-4 flex items-center justify-center gap-2'>
           <Mic className='w-6 h-6 text-blue-600' />
-          {t('voiceBinding')}
+          {t('Dialect Detector')}
         </h2>
         <p className='mb-4 text-gray-700 dark:text-gray-300'>
-          {t('voicePrompt')}
+          {t('Say a Greeting in Your Dialect')}
         </p>
 
         <div className='space-x-4 mb-4'>
