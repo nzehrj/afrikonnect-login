@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { Mic } from 'lucide-react'
 
 export default function VoiceBinding({ onSuccess }) {
   const { t } = useTranslation()
@@ -85,13 +86,18 @@ export default function VoiceBinding({ onSuccess }) {
   }
 
   return (
-    <>
+    <div className='flex items-center justify-center min-h-screen px-4'>
+      {' '}
+      {/* ✅ Center on small screens */}
       <motion.div
-        className='max-w-md mx-auto bg-white dark:bg-neutral-900 p-6 rounded-lg shadow text-center'
+        className='max-w-md w-full bg-white dark:bg-neutral-900 p-6 rounded-lg shadow text-center'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h2 className='text-xl font-bold mb-4'>🎙 {t('voiceBinding')}</h2>
+        <h2 className='text-xl font-bold mb-4 flex items-center justify-center gap-2'>
+          <Mic className='w-6 h-6 text-blue-600' />
+          {t('voiceBinding')}
+        </h2>
         <p className='mb-4 text-gray-700 dark:text-gray-300'>
           {t('voicePrompt')}
         </p>
@@ -133,6 +139,6 @@ export default function VoiceBinding({ onSuccess }) {
           </motion.button>
         )}
       </motion.div>
-    </>
+    </div>
   )
 }

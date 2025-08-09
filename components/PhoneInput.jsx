@@ -128,7 +128,7 @@ export default function PhoneInput({ onSuccess }) {
         Enter Phone Number
       </label>
 
-      <div className='flex items-center border rounded-lg px-2 py-1.5 bg-white shadow-sm relative'>
+      <div className='flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm relative'>
         <Phone size={18} className='text-gray-500 mr-2' />
 
         {/* Flag button */}
@@ -200,9 +200,9 @@ export default function PhoneInput({ onSuccess }) {
 
       <button
         type='submit'
-        className='bg-black text-white px-4 py-2 rounded shadow w-full text-sm'
+        className='bg-black text-white font-semibold px-4 py-3 rounded shadow w-full text-sm'
       >
-        Continue
+        CONTINUE
       </button>
     </form>
   )
