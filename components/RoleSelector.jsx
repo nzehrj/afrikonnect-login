@@ -33,7 +33,7 @@ export default function RoleSelector({ onSuccess }) {
   }
 
   return (
-    <div className='w-full max-w-md mx-auto'>
+    <div className='w-full max-w-md mx-auto space-y-8'>
       <CulturalQuote className='mb-6 text-white text-center' />
 
       <motion.div
