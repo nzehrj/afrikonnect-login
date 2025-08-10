@@ -9,6 +9,7 @@ import {
   HeartPulse,
   BookOpen,
 } from 'lucide-react'
+import CulturalQuote from './CulturalQuote'
 
 const roles = [
   { id: 'trader', label: 'Trader', icon: ShoppingCart },
@@ -32,46 +33,51 @@ export default function RoleSelector({ onSuccess }) {
   }
 
   return (
-    <motion.div
-      className='w-full max-w-md mx-auto p-6 rounded-xl shadow-md border-1 border-parchment-cream'
-      style={{
-        background:
-          'linear-gradient(rgba(96, 93, 93, 0.5), rgba(96, 93, 93, 0.5))',
-      }}
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-    >
-      <h2 className='text-lg font-medium mb-4 text-center text-white'>
-        What best describes your role?
-      </h2>
-      <div className='space-y-3'>
-        {roles.map((role) => {
-          const Icon = role.icon
-          return (
-            <button
-              key={role.id}
-              onClick={() => handleSelect(role.id)}
-              className={`flex items-center gap-3 w-full py-2 px-3 rounded-lg text-left border transition-all ${
-                selectedRole === role.id
-                  ? 'bg-deep-slate-teal text-white border-1 border-gray-300'
-                  : 'bg-[var(--color-overlay-gray)] text-white border-gray-300 hover:bg-[var(--color-overlay-gray-hover)]'
-              }`}
-            >
-              <Icon size={20} />
-              <span>{role.label}</span>
-            </button>
-          )
-        })}
-      </div>
+    <div className='w-full max-w-md mx-auto'>
+      <CulturalQuote className='mb-6 text-white text-center' />
 
-      <button
-        onClick={handleContinue}
-        disabled={!selectedRole}
-        className='mt-6 w-full py-3 px-4 bg-forest-shade hover:bg-forest-deep text-white font-semibold rounded-lg disabled:opacity-50'
+      <motion.div
+        className='p-6 rounded-xl shadow-md border-1 border-parchment-cream mt-1'
+        style={{
+          background:
+            'linear-gradient(rgba(96, 93, 93, 0.5), rgba(96, 93, 93, 0.5))',
+        }}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
       >
-        Continue
-      </button>
-    </motion.div>
+        <h2 className='text-lg font-medium mb-4 text-center text-white'>
+          What best describes your role?
+        </h2>
+
+        <div className='space-y-3'>
+          {roles.map((role) => {
+            const Icon = role.icon
+            return (
+              <button
+                key={role.id}
+                onClick={() => handleSelect(role.id)}
+                className={`flex items-center gap-3 w-full py-2 px-3 rounded-lg text-left border transition-all ${
+                  selectedRole === role.id
+                    ? 'bg-deep-slate-teal text-white border-1 border-gray-300'
+                    : 'bg-[var(--color-overlay-gray)] text-white border-gray-300 hover:bg-[var(--color-overlay-gray-hover)]'
+                }`}
+              >
+                <Icon size={20} />
+                <span>{role.label}</span>
+              </button>
+            )
+          })}
+        </div>
+
+        <button
+          onClick={handleContinue}
+          disabled={!selectedRole}
+          className='mt-6 w-full py-3 px-4 bg-forest-shade hover:bg-forest-deep text-white font-semibold rounded-lg disabled:opacity-50'
+        >
+          Continue
+        </button>
+      </motion.div>
+    </div>
   )
 }

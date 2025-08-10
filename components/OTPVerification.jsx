@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import CulturalQuote from './CulturalQuote'
 
 export default function OTPVerification({ onSuccess }) {
   const [otp, setOtp] = useState('')
@@ -19,6 +20,10 @@ export default function OTPVerification({ onSuccess }) {
 
   return (
     <>
+      <div className='mb-6'>
+        <CulturalQuote />
+      </div>
+
       <div className='space-y-4 mt-8'>
         <h2 className='text-xl font-bold'>OTP Verification</h2>
         {!isVerified ? (

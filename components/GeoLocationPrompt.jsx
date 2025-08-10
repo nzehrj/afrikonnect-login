@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import CulturalQuote from './CulturalQuote'
 
 export default function GeoLocationPrompt({ onSuccess }) {
   const [loading, setLoading] = useState(true)
@@ -101,10 +102,14 @@ export default function GeoLocationPrompt({ onSuccess }) {
 
   return (
     <>
+      <div className='max-w-md mx-auto mt-10'>
+        <CulturalQuote />
+      </div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className='max-w-md mx-auto text-center mt-20 p-6 bg-forest-shadow text-parchment rounded-lg shadow'
+        className='max-w-md mx-auto text-center mt-6 p-6 bg-forest-shadow text-parchment rounded-lg shadow'
       >
         {loading && <p>Detecting your location...</p>}
 

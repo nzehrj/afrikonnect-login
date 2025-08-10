@@ -74,11 +74,11 @@ export default function Home() {
         )}
       </div>
 
-      {step === 1 && (
+      {/*step === 1 && (
         <div className='mb-4 w-full max-w-md'>
           <CulturalQuote />
         </div>
-      )}
+      )*/}
 
       <AnimatePresence mode='wait'>
         {step === 1 && (
