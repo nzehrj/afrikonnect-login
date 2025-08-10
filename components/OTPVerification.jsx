@@ -45,7 +45,7 @@ export default function OTPVerification({ onSuccess }) {
             </p>
             <button
               onClick={onSuccess}
-              className='bg-forest-shade text-white font-bold px-8 py-1 rounded'
+              className='bg-forest-shade hover:bg-forest-deep text-white font-bold px-8 py-2 rounded'
             >
               Next
             </button>

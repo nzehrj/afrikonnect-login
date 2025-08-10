@@ -67,7 +67,7 @@ export default function Home() {
             <p className='text-7xl font-extrabold text-sky-50 mb-4'>
               {getTimeOfDay()}
             </p>
-            <h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100'>
+            <h2 className='text-4xl font-semibold text-white'>
               {getGreeting()}
             </h2>
           </>

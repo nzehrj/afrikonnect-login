@@ -86,7 +86,7 @@ export default function VoiceBinding({ onSuccess }) {
   }
 
   return (
-    <div className='flex items-center justify-center min-h-screen my-[-40px] px-4'>
+    <div className='flex items-center justify-center mt-15 px-4'>
       {' '}
       {/* ✅ Center on small screens */}
       <motion.div
