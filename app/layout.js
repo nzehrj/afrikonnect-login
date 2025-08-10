@@ -24,13 +24,13 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} text-white min-h-screen`}
         style={{
           backgroundImage:
-            "linear-gradient(to left, rgba(10,10,10,0.65), rgba(10,10,10,0.05)), url('/images/art.jpg')",
-          backgroundSize: 'cover',
+            "linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/african.JPEG')",
+          backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'repeat',
         }}
       >
-        <main className='flex item-center justify-center md:justify-end min-h-screen'>
+        <main className='flex item-center justify-center min-h-screen'>
           {children}
         </main>
       </body>

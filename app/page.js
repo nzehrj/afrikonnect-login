@@ -64,7 +64,7 @@ export default function Home() {
       <div className='text-center mb-4 '>
         {hasMounted && (
           <>
-            <p className='text-7xl md:font-extrabold text-sky-50 dark:text-sky-50 mb-4'>
+            <p className='text-7xl font-extrabold text-sky-50 mb-4'>
               {getTimeOfDay()}
             </p>
             <h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100'>

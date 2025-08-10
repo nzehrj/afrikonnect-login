@@ -38,17 +38,15 @@ export default function CulturalQuote() {
 
   return (
     <motion.div
-      className='w-full max-w-xl mx-auto mt-6 p-6 bg-white dark:bg-gray-900 rounded-xl shadow text-center'
+      className='w-full max-w-xl mx-auto mt-6 p-6 bg-parchment rounded-xl shadow text-center'
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <blockquote className='text-lg italic text-gray-700 dark:text-gray-200 mb-2'>
+      <blockquote className='text-lg italic text-terra-copper mb-2'>
         “{quote.text}”
       </blockquote>
-      <p className='text-sm font-medium text-gray-600 dark:text-gray-400'>
-        — {quote.author}
-      </p>
+      <p className='text-sm font-medium text-clay-rose'>— {quote.author}</p>
     </motion.div>
   )
 }

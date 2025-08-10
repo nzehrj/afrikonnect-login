@@ -28,24 +28,24 @@ export default function OTPVerification({ onSuccess }) {
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
               placeholder='Enter OTP'
-              className='border px-3 py-2 rounded w-full'
+              className='border-2 border-parchment outline-none px-3 py-2 rounded w-full'
             />
             {error && <p className='text-red-500 text-sm'>{error}</p>}
             <button
               type='submit'
-              className='bg-blue-600 text-white font-bold px-8 py-2 rounded'
+              className=' bg-forest-deep hover:bg-moss-stone text-white font-bold px-8 py-2 rounded'
             >
               Verify OTP
             </button>
           </form>
         ) : (
           <div className='space-y-2'>
-            <p className='text-green-600 font-medium'>
+            <p className='text-parchment-cream font-medium'>
               OTP verified successfully ✅
             </p>
             <button
               onClick={onSuccess}
-              className='bg-green-600 text-white font-bold px-8 py-1 rounded'
+              className='bg-forest-shade text-white font-bold px-8 py-1 rounded'
             >
               Next
             </button>

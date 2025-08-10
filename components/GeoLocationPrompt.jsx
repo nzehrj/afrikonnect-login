@@ -104,11 +104,11 @@ export default function GeoLocationPrompt({ onSuccess }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className='max-w-md mx-auto text-center p-6 bg-neutral-800 rounded-lg shadow'
+        className='max-w-md mx-auto text-center mt-20 p-6 bg-forest-shadow text-parchment rounded-lg shadow'
       >
         {loading && <p>Detecting your location...</p>}
 
-        {error && <p className='text-red-600'>{error}</p>}
+        {error && <p className='text-red-400'>{error}</p>}
 
         {!loading && inAfrica === false && (
           <div className='bg-yellow-100 p-4 rounded-md shadow'>

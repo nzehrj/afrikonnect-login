@@ -121,7 +121,7 @@ export default function PhoneInput({ onSuccess }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='space-y-4 w-[280px] md:w-[250px] mx-auto relative'
+      className='space-y-4 w-[280px] md:w-[250px] mx-auto relative mt-5'
       ref={containerRef}
     >
       <label className='block text-sm font-medium text-amber-100 mb-2'>
@@ -200,7 +200,7 @@ export default function PhoneInput({ onSuccess }) {
 
       <button
         type='submit'
-        className='bg-black text-white font-semibold px-4 py-3 rounded shadow w-full text-sm'
+        className='bg-deep-burgundy hover:bg-mocha-bark text-white font-semibold px-4 py-3 rounded shadow w-full text-sm'
       >
         CONTINUE
       </button>
