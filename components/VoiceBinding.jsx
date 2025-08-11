@@ -30,13 +30,13 @@ export default function VoiceBinding({ onSuccess }) {
       }
 
       recognition.onerror = (event) => {
-        setError(`${t('speechError')}: ${event.error}`)
+        setError(`${t('Speech Error')}: ${event.error}`)
         setIsRecording(false)
       }
 
       recognitionRef.current = recognition
     } else {
-      setError(t('browserUnsupported'))
+      setError(t('Browser Unsupported'))
     }
   }, [t])
 
@@ -77,7 +77,7 @@ export default function VoiceBinding({ onSuccess }) {
     if (match) {
       setIsBound(true)
     } else {
-      setError(t('dialectNotDetected'))
+      setError(t('Dialect Not Detected'))
     }
   }
 
