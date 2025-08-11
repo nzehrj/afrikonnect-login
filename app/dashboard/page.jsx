@@ -3,13 +3,13 @@
 export default function Dashboard({ onBackToLogin }) {
   return (
     <div
-      className='p-8 text-center rounded-2xl shadow-lg border-2 border-white mt-20'
+      className='p-8 text-center rounded-2xl shadow-lg mt-20'
       style={{
         background:
-          'linear-gradient(rgba(96, 93, 93, 0.5), rgba(96, 93, 93, 0.5))',
+          'linear-gradient(rgba(50, 48, 48, 0.8), rgba(50, 48, 48, 0.8))',
       }}
     >
-      <h1 className='text-2xl text-white font-bold mb-4'>
+      <h1 className='text-2xl text-white font-semibold mb-4'>
         Welcome to the Afrikonnect App
       </h1>
       <button

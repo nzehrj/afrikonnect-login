@@ -39,8 +39,7 @@ export default function RoleSelector({ onSuccess }) {
       <motion.div
         className='p-6 rounded-xl shadow-md border-1 border-parchment-cream mt-1'
         style={{
-          background:
-            'linear-gradient(rgba(96, 93, 93, 0.5), rgba(96, 93, 93, 0.5))',
+          background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
         }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
