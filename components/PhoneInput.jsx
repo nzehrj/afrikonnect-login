@@ -203,7 +203,7 @@ export default function PhoneInput({ onSuccess }) {
 
         <button
           type='submit'
-          className='bg-deep-burgundy hover:bg-mocha-bark text-white font-semibold px-4 py-3 rounded-md shadow w-full text-sm'
+          className='bg-gradient-to-r from-green-800 to-green-950 hover:from-green-900 hover:to-black transition-colors duration-300 text-white font-semibold px-4 py-3 rounded-md shadow w-full text-sm'
         >
           CONTINUE
         </button>

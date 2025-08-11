@@ -28,12 +28,15 @@
     rgba(96, 93, 93, 0.5)
   );
   --color-overlay-gray-hover: linear-gradient(
-    rgba(96, 93, 93, 0.5),
-    rgba(96, 93, 93, 0.5)
+    rgba(50, 50, 50, 0.7),
+    rgba(50, 50, 50, 0.7)
   );
+
   --color-deep-slate-teal: #3f4e4f;
   --color-charcoal-slate: #2c3639;
   --color-deep-burgundy: #442727;
   --color-warm-sand: #d7d3bf;
   --color-soft-linen: #ecebde;
+  --color-soft-mint: #d0e7d2;
+  --color-overlay-dark: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }

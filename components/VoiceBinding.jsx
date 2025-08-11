@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Mic } from 'lucide-react'
+import { CheckCircle, Mic } from 'lucide-react'
 import CulturalQuote from './CulturalQuote'
 
 export default function VoiceBinding({ onSuccess }) {
@@ -103,18 +103,18 @@ export default function VoiceBinding({ onSuccess }) {
             {t('Say a Greeting in Your Dialect')}
           </p>
 
-          <div className='space-x-4 mb-4'>
+          <div className='space-x-4 mb-4 flex flex-col gap-4'>
             <button
               onClick={handleStart}
               disabled={isRecording}
-              className='px-4 py-2 bg-forest-shade text-white rounded hover:bg-forest-deep disabled:opacity-50'
+              className='w-full px-4 py-2 bg-forest-shade text-white rounded hover:bg-forest-deep disabled:opacity-50'
             >
               {t('Start Recording')}
             </button>
             <button
               onClick={handleStop}
               disabled={!isRecording}
-              className='px-4 py-2 bg-mahogany-ember text-white rounded hover:bg-dark-garnet disabled:opacity-50'
+              className='w-full px-4 py-2 bg-mahogany-ember text-white rounded hover:bg-dark-garnet disabled:opacity-50'
             >
               {t('Stop Recording')}
             </button>
@@ -134,9 +134,10 @@ export default function VoiceBinding({ onSuccess }) {
             <motion.button
               onClick={handleProceed}
               whileTap={{ scale: 0.95 }}
-              className='mt-4 bg-forest-shade text-white px-4 py-2 rounded hover:bg-forest-deep'
+              className='w-full mt-4 bg-forest-shade text-white px-7 py-2 rounded hover:bg-forest-deep flex items-center gap-2 justify-center'
             >
-              ✅ {t('Proceed')}
+              <CheckCircle className='w-5 h-5 text-white' />
+              {t('Proceed')}
             </motion.button>
           )}
         </motion.div>

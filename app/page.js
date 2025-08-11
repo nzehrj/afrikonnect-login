@@ -64,10 +64,10 @@ export default function Home() {
       <div className='text-center mb-4 '>
         {hasMounted && (
           <>
-            <p className='text-7xl font-extrabold text-sky-50 mb-4'>
+            <p className='text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-400 mb-4'>
               {getTimeOfDay()}
             </p>
-            <h2 className='text-4xl font-semibold text-white'>
+            <h2 className='text-2xl font-semibold text-gray-300'>
               {getGreeting()}
             </h2>
           </>

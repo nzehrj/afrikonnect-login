@@ -33,12 +33,12 @@ export default function OTPVerification({ onSuccess }) {
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
               placeholder='Enter OTP'
-              className='border-2 border-parchment outline-none px-3 py-2 rounded w-full'
+              className='border-2 border-parchment outline-none px-3 py-2 rounded w-full bg-white text-black'
             />
             {error && <p className='text-red-500 text-sm'>{error}</p>}
             <button
               type='submit'
-              className=' bg-forest-deep hover:bg-moss-stone text-white font-bold px-8 py-2 rounded'
+              className=' bg-forest-deep hover:bg-moss-stone text-white font-bold px-8 py-2 rounded w-full'
             >
               Verify OTP
             </button>
@@ -46,11 +46,11 @@ export default function OTPVerification({ onSuccess }) {
         ) : (
           <div className='space-y-2'>
             <p className='text-parchment-cream font-medium'>
-              OTP verified successfully ✅
+              OTP verified successfully
             </p>
             <button
               onClick={onSuccess}
-              className='bg-forest-shade hover:bg-forest-deep text-white font-bold px-8 py-2 rounded'
+              className='bg-forest-shade hover:bg-forest-deep text-white font-bold px-8 py-2 rounded w-full'
             >
               Next
             </button>
