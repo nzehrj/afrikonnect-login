@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const quotes = [
   {
     text: 'Wisdom is like a baobab tree; no one individual can embrace it.',
-    author: 'Akan Proverb',
+    author: 'African Proverb',
   },
   {
     text: 'Even the best cooking pot will not produce food.',
@@ -14,7 +14,7 @@ const quotes = [
   },
   {
     text: 'A single bracelet does not jingle.',
-    author: 'Congolese Proverb',
+    author: 'African Proverb',
   },
   {
     text: 'If you want to go fast, go alone. If you want to go far, go together.',
@@ -22,7 +22,23 @@ const quotes = [
   },
   {
     text: 'Rain does not fall on one roof alone.',
-    author: 'Cameroonian Proverb',
+    author: 'African Proverb',
+  },
+  {
+    text: 'No shortcuts exist to the top of a palm tree.',
+    author: 'African Proverb',
+  },
+  {
+    text: 'All monkeys cannot hang from the same branch.',
+    author: 'African Proverb',
+  },
+  {
+    text: 'Don’t think there are no crocodiles just because the water is calm.',
+    author: 'African Proverb',
+  },
+  {
+    text: 'If there is no enemy within, the enemy outside can do no harm.',
+    author: 'African Proverb',
   },
 ]
 

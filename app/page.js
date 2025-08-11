@@ -9,7 +9,6 @@ import OTPVerification from '@/components/OTPVerification'
 import VoiceBinding from '@/components/VoiceBinding'
 import RoleSelector from '@/components/RoleSelector'
 import Dashboard from './dashboard/page'
-import CulturalQuote from '@/components/CulturalQuote'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -73,12 +72,6 @@ export default function Home() {
           </>
         )}
       </div>
-
-      {/*step === 1 && (
-        <div className='mb-4 w-full max-w-md'>
-          <CulturalQuote />
-        </div>
-      )*/}
 
       <AnimatePresence mode='wait'>
         {step === 1 && (

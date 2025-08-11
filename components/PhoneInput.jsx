@@ -134,7 +134,6 @@ export default function PhoneInput({ onSuccess }) {
         <div className='flex items-center border rounded-lg px-4 py-3 bg-white shadow-sm relative'>
           <Phone size={18} className='text-gray-500 mr-2' />
 
-          {/* Flag button */}
           <button
             type='button'
             onClick={() => setDropdownOpen((prev) => !prev)}
@@ -149,7 +148,6 @@ export default function PhoneInput({ onSuccess }) {
             <ChevronDown size={14} className='text-gray-500' />
           </button>
 
-          {/* Phone number input */}
           <input
             type='tel'
             placeholder='801 234 5678'
@@ -163,7 +161,6 @@ export default function PhoneInput({ onSuccess }) {
           />
         </div>
 
-        {/* Animated dropdown */}
         <AnimatePresence>
           {dropdownOpen && (
             <motion.ul

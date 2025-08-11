@@ -116,7 +116,13 @@ export default function GeoLocationPrompt({ onSuccess }) {
         {error && <p className='text-red-400'>{error}</p>}
 
         {!loading && inAfrica === false && (
-          <div className='bg-yellow-100 p-4 rounded-md shadow'>
+          <div
+            className=' p-4 rounded-md shadow text-white'
+            style={{
+              background:
+                'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6))',
+            }}
+          >
             <p className='font-medium mb-2'>
               🌍 You’re currently outside your homeland.
             </p>
@@ -126,7 +132,7 @@ export default function GeoLocationPrompt({ onSuccess }) {
             </p>
             <button
               onClick={onSuccess}
-              className='bg-stone-400 text-gray-800 px-4 py-2 rounded-md hover:bg-orange-600'
+              className='bg-forest-deep text-white w-full px-4 py-2 rounded-md hover:bg-forest-shade'
             >
               Continue in Travel Mode
             </button>

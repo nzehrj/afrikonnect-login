@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Afrikonnect Login Page Implementation
 
-## Getting Started
+## PROJECT CONTEXT
 
-First, run the development server:
+This project implements the Afrikonnect Login Page, the first entry point into the platform’s digital village. It combines modern frontend practices with African cultural elements from visuals to interactive flows to create a login experience that’s functional, welcoming, and rooted in identity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## COMPONENT STRUCTURE
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Login flow:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<CulturalQuote/> Displays rotating quotes on every step until role selection.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<PhoneInput/> Phone number input (validated with libphonenumber-js).
 
-## Learn More
+<GeoLocationPrompt/> Auto-detects user location and shows Travel Mode modal if outside Africa.
 
-To learn more about Next.js, take a look at the following resources:
+<OTPVerification/> Sends and verifies OTP before continuing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<VoiceBinding/> Records a short greeting in the user’s local dialect using WebRTC + Web Speech API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<RoleSelector/> Allows the user to choose their Afro role via tiles/dropdown.
 
-## Deploy on Vercel
+## TOOLS USED:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Framework: Next.js 15.4.6 (React 19.1.0).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Styling: Tailwind 4.1 CSS with custom theme colors for African-inspired tones.
+
+Animations: Framer Motion for page transitions and micro-interactions.
+
+Forms & Validation: React Hook Form + Zod.
+
+Geolocation: HTML5 Geolocation API with fallback modal logic.
+
+Voice Capture: WebRTC + Web Speech API for audio recording in supported browsers.
+
+Icons: Lucid React Icons
+
+Fonts: Google Fonts.
+
+## DESIGN DECISIONS
+
+Cultural Backgrounds: Subtle animated African Black woman
+
+Color Palette:
+
+sand-light: #f8f3d9
+
+parchment: #d7d3bf
+
+forest-deep: #2c3930
+
+forest-shadow: #2c3930
+
+Dynamic Greetings: Based on time of day Good morning, traveler plus rotating proverbs.
+
+Media Query: Fully responsive.
+
+## CHALLENGES FACED
+
+Tailwind theme customization.
+
+Background Image to use.
+
+Errors due to mismatched Tailwind Configurations.
