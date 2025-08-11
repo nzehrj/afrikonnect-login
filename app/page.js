@@ -47,7 +47,7 @@ export default function Home() {
   const getGreeting = () => {
     if (!currentTime) return ''
     const hour = currentTime.getHours()
-    if (hour >= 5 && hour < 12) return t('Good Morning Traveler')
+    if (hour >= 0 && hour < 12) return t('Good Morning Traveler')
     if (hour >= 12 && hour < 17) return t('Good Afternoon Traveler')
     return t('Good Evening Traveler')
   }
