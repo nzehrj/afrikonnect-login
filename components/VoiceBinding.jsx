@@ -59,11 +59,12 @@ export default function VoiceBinding({ onSuccess }) {
   const simulateDialectDetection = (text) => {
     const dialectWords = [
       'akwaaba',
-      'bawo',
+      'How far',
       'kaabo',
       'sannu',
       'ndewo',
       'nnoo',
+      'Ekaro',
       'wahala',
       'chai',
       'abeg',
