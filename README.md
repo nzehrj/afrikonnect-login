@@ -1,65 +1,57 @@
-Afrikonnect Login Page Implementation
+# Afrikonnect
 
-## PROJECT CONTEXT
+<p align="center">
+  <strong>Afrikonnect Authentication & Onboarding Platform</strong>
+</p>
 
-This project implements the Afrikonnect Login Page, the first entry point into the platform’s digital village. It combines modern frontend practices with African cultural elements from visuals to interactive flows to create a login experience that’s functional, welcoming, and rooted in identity.
+<p align="center">
+  A modern, secure, and interactive authentication experience built for the Afrikonnect platform.
+</p>
 
-## COMPONENT STRUCTURE
+---
 
-Login flow:
+## 📌 Overview
 
-<CulturalQuote/> Displays rotating quotes on every step until role selection.
+Afrikonnect is a modern digital platform with a progressive authentication and onboarding experience.
 
-<PhoneInput/> Phone number input (validated with libphonenumber-js).
+The login system guides users through multiple stages of authentication and onboarding, combining phone verification, location services, OTP authentication, voice binding, and role selection before granting access to the user's dashboard.
 
-<GeoLocationPrompt/> Auto-detects user location and shows Travel Mode modal if outside Africa.
+The interface is designed to be responsive, accessible, interactive, and optimized for both mobile and desktop devices.
 
-<OTPVerification/> Sends and verifies OTP before continuing.
+---
 
-<VoiceBinding/> Records a short greeting in the user’s local dialect using WebRTC + Web Speech API.
+## ✨ Features
 
-<RoleSelector/> Allows the user to choose their Afro role via tiles/dropdown.
+- 📱 Phone number authentication
+- 🌍 Geolocation detection
+- 🔐 OTP verification
+- 🎙️ Voice binding
+- 👤 User role selection
+- 💬 Cultural quotes throughout the authentication experience
+- 🎨 Modern responsive UI
+- ✨ Smooth page transitions and animations
+- 📱 Mobile-first experience
+- 🖥️ Desktop responsive layout
+- 🔄 Global client-side state management
+- 📡 WebRTC integration
+- ✅ Form validation
+- 🛡️ Structured authentication flow
 
-## TOOLS USED:
+---
 
-Framework: Next.js 15.4.6 (React 19.1.0).
+## 🔐 Authentication Flow
 
-Styling: Tailwind 4.1 CSS with custom theme colors for African-inspired tones.
+The authentication process follows a progressive onboarding experience:
 
-Animations: Framer Motion for page transitions and micro-interactions.
-
-Forms & Validation: React Hook Form + Zod.
-
-Geolocation: HTML5 Geolocation API with fallback modal logic.
-
-Voice Capture: WebRTC + Web Speech API for audio recording in supported browsers.
-
-Icons: Lucid React Icons
-
-Fonts: Google Fonts.
-
-## DESIGN DECISIONS
-
-Cultural Backgrounds: Subtle animated African Black woman
-
-Color Palette:
-
-sand-light: #f8f3d9
-
-parchment: #d7d3bf
-
-forest-deep: #2c3930
-
-forest-shadow: #2c3930
-
-Dynamic Greetings: Based on time of day Good morning, traveler plus rotating proverbs.
-
-Media Query: Fully responsive.
-
-## CHALLENGES FACED
-
-Tailwind theme customization.
-
-Background Image to use.
-
-Errors due to mismatched Tailwind Configurations.
+```text
+Phone Input
+     ↓
+Geolocation Prompt
+     ↓
+OTP Verification
+     ↓
+Voice Binding
+     ↓
+Role Selection
+     ↓
+Dashboard
